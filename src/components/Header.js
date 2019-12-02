@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 const Header = () => {
-    const { imageStyle, textStyling, wrapper } = styles;
+    const { imageStyle, textStyling, wrapper, textWrapper } = styles;
 
     return (
         <View style={wrapper}>
@@ -10,7 +10,9 @@ const Header = () => {
                 style={imageStyle}
                 source={require('../images/Default.png')}
             />
-            <Text>Museum</Text>
+            <View style={textWrapper}>
+                <Text style={textStyling}>The Bob Doran Museum of Computing</Text>
+            </View>
             <Image 
                 style={imageStyle}
                 source={require('../images/Default.png')}
@@ -21,15 +23,20 @@ const Header = () => {
 
 const styles = {
     imageStyle: {
+
         width: 80,
         height: 80
     },
+    textWrapper: {
+        flexDirection: 'column',
+        justifyContent: 'center'
+    },
     textStyling: {
-
+        color: 'red'
     },
     wrapper: {
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'space-between'
     }
 }
 
