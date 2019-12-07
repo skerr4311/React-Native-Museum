@@ -27,3 +27,5 @@ basically, I had to delete the project and start it again without clicking the b
 Hope this helps someone.
 
 23/11/19
+
+Trying to recreate a mobile friendly version of my 335 museum assignment
