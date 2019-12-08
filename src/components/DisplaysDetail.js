@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
+import Item from './items';
+
 const DisplaysDetail = (props) => {
     const { imageStyle } = styles;
 
     return (
-        <View>
+        <Item>
             <Text>{props.item.Description}</Text>
             <View>
                 <Image
@@ -14,7 +16,7 @@ const DisplaysDetail = (props) => {
                 />
                 <Text>{props.item.Title}</Text>
             </View>
-        </View>
+        </Item>
     );
 }
 
