@@ -4,7 +4,7 @@ import { Text, Image } from 'react-native';
 import Item from './items';
 import ItemSection from './ItemSection';
 
-const DisplaysDetail = (props) => {
+const NewsDetail = (props) => {
     const { imageStyle } = styles;
 
     return (
@@ -13,13 +13,14 @@ const DisplaysDetail = (props) => {
                 <ItemSection>
                 <Image
                     style={imageStyle}
-                    source={{ uri: 'http://redsox.uoa.auckland.ac.nz/ms/MuseumService.svc/itemimg?id=poly' }}
+                    source={{ uri: props.item.enclosureField.urlField }}
                 />
                 </ItemSection>
-                <Text>{props.item.Title}</Text>
+                <Text>{props.item.titleField}</Text>
+                <Text>{props.item.pubDateField}</Text>
             </ItemSection>
             <ItemSection>
-                <Text>{props.item.Description}</Text>
+                <Text>{props.item.descriptionField}</Text>
             </ItemSection>
         </Item>
     );
@@ -33,4 +34,4 @@ const styles = {
     }
 }
 
-export default DisplaysDetail;
+export default NewsDetail;

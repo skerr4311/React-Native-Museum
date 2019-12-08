@@ -5,6 +5,7 @@ import { View, Text, AppRegistry } from 'react-native';
 import Header from './src/components/Header';
 import Tabs from './src/components/Tabs';
 import DisplaysList from './src/components/DisplaysList';
+import NewsList from './src/components/NewsList';
 
 //create component
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
         <View>
             <Header /> 
             <Tabs /> 
-            <DisplaysList />  
+            <NewsList />  
         </View>
     );
 }
