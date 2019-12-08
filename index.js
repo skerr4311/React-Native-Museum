@@ -3,12 +3,14 @@ import React from 'react';
 import { View, Text, AppRegistry } from 'react-native';
 
 import Header from './src/components/Header';
+import Tabs from './src/components/Tabs';
 
 //create component
 const App = () => {
     return (
         <View>
-            <Header />
+            <Header /> 
+            <Tabs />   
         </View>
     );
 }
