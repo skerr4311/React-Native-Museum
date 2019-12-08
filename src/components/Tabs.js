@@ -1,15 +1,17 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
+import Button from './Button';
+
 const Tabs = () => {
     const { wrapper } = styles;
 
     return (
         <View style={wrapper}>
-            <Text>Home</Text>
-            <Text>News</Text>
-            <Text>Displays</Text>
-            <Text>Guest Book</Text>
+            <Button title={'Home'}/>
+            <Button title={'News'}/>
+            <Button title={'Displays'}/>
+            <Button title={'Guest Book'}/>
         </View>
     );
 }
