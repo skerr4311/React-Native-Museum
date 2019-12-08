@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import axios from 'axios';
 
+import DisplaysDetail from './DisplaysDetail';
+
 //class always needs a render method
 class DisplaysList extends Component {
     state = { displaysList: [] };
@@ -15,7 +17,7 @@ class DisplaysList extends Component {
 
     renderList = () => {
         return this.state.displaysList.map(item => {
-            return <Text key={item.Title}>{item.Title}</Text>;
+            return <DisplaysDetail key={item.Title} item={item}/>;   
         })
     }
 
