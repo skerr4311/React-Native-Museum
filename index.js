@@ -4,13 +4,15 @@ import { View, Text, AppRegistry } from 'react-native';
 
 import Header from './src/components/Header';
 import Tabs from './src/components/Tabs';
+import DisplaysList from './src/components/DisplaysList';
 
 //create component
 const App = () => {
     return (
         <View>
             <Header /> 
-            <Tabs />   
+            <Tabs /> 
+            <DisplaysList />  
         </View>
     );
 }
