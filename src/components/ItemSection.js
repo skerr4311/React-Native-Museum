@@ -13,7 +13,7 @@ const styles = {
     viewStyle: {
         padding: 5,
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         position: 'relative'
     }
 }

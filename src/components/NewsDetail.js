@@ -1,23 +1,29 @@
 import React from 'react';
-import { Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 
 import Item from './items';
 import ItemSection from './ItemSection';
 
 const NewsDetail = (props) => {
-    const { imageStyle } = styles;
+    const { imageStyle, headerContainer, timeStyle, titleStyle } = styles;
 
     return (
         <Item>
             <ItemSection>
-                <ItemSection>
                 <Image
                     style={imageStyle}
                     source={{ uri: props.item.enclosureField.urlField }}
                 />
-                </ItemSection>
-                <Text>{props.item.titleField}</Text>
-                <Text>{props.item.pubDateField}</Text>
+            </ItemSection>
+            <ItemSection>
+                <View style={headerContainer}>
+                    <TouchableOpacity onPress={ () => {
+                        Linking.openURL(props.item.linkField);
+                    }}>
+                        <Text style={titleStyle}>{props.item.titleField}</Text>
+                    </TouchableOpacity>
+                    <Text style={timeStyle}>{props.item.pubDateField}</Text>
+                </View>
             </ItemSection>
             <ItemSection>
                 <Text>{props.item.descriptionField}</Text>
@@ -31,6 +37,18 @@ const styles = {
         height: 300,
         width: 0,
         flex: 1
+    },
+    headerContainer: {
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    timeStyle: {
+        color: 'grey',
+        fontWeight: 'bold'
+    },
+    titleStyle: {
+        fontSize: 18,
+        fontWeight: '500'
     }
 }
 

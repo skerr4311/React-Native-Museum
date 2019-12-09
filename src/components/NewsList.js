@@ -17,7 +17,7 @@ class NewsList extends Component {
 
     renderList = () => {
         return this.state.newsList.map(item => {
-            return <NewsDetail key={item.Title} item={item}/>;   
+            return <NewsDetail key={item.titleField} item={item}/>;   
         })
     }
 
