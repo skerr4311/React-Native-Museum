@@ -22,7 +22,6 @@ class DisplaysList extends Component {
     }
 
     render() {
-        console.log(this.state);
         return (
             <ScrollView>
                 {this.renderList()}

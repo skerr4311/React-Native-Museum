@@ -13,7 +13,7 @@ const App = () => {
         <View>
             <Header /> 
             <Tabs /> 
-            <DisplaysList />  
+            <NewsList />  
         </View>
     );
 }
