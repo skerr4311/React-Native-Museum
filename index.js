@@ -6,6 +6,7 @@ import Header from './src/components/Header';
 import Tabs from './src/components/Tabs';
 import DisplaysList from './src/components/DisplaysList';
 import NewsList from './src/components/NewsList';
+import Home from './src/components/Home';
 
 //create component
 const App = () => {
@@ -13,7 +14,9 @@ const App = () => {
         <View>
             <Header /> 
             <Tabs /> 
-            <NewsList />  
+            <View style={{backgroundColor: '#dad8d8'}}>
+                <Home />
+            </View>  
         </View>
     );
 }
