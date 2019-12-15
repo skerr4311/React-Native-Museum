@@ -5,12 +5,15 @@ import { View, Text, Image } from 'react-native';
 import ItemSection from './ItemSection';
 import Item from './items'
 
-const Home = () => {
-    const { imageStyle, textStyle } = styles
+class Home extends React.Component {
 
-    return (
+    static navigationOptions = {
+        title: 'Home'
+    };
+    render() {
+        return (
         <Item>
-            <Text style={textStyle}> 
+            <Text style={styles.textStyle}> 
                 Welcome to our displays on the history of computing and computers. 
                 You might like to have a look at the history time line in the entrance 
                 corridor down below or visit one of the lobbies to the right for 
@@ -25,13 +28,16 @@ const Home = () => {
             </Text>
             <ItemSection>
                 <Image 
-                    style={imageStyle}
+                    style={styles.imageStyle}
                     source={{ uri: 'https://thespinoff.co.nz/wp-content/uploads/2019/04/eight_col_uni_of_auckland-850x510.jpg'}}
                 />
             </ItemSection>
         </Item>
     );
+    }
 }
+
+    
 
 const styles = {
     imageStyle: {
