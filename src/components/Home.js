@@ -13,28 +13,32 @@ class Home extends React.Component {
     };
     render() {
         return (
-        <Item>
-            <Header />
-            <Text style={styles.textStyle}> 
-                Welcome to our displays on the history of computing and computers. 
-                You might like to have a look at the history time line in the entrance 
-                corridor down below or visit one of the lobbies to the right for 
-                displays containing more detail. You can learn more about the displays 
-                here, where you can also see a list of the many topics that we cover. 
-                Enjoy! If you are intrigued by what you find here and live close to 
-                Auckland, or are visiting the city, please feel free to drop in to the 
-                department and see the displays for yourself. We are located at the 
-                University on Princes Street and are always open during normal office 
-                hours and also in the evenings and on the weekends when classes are in 
-                session. 
-            </Text>
-            <ItemSection>
-                <Image 
-                    style={styles.imageStyle}
-                    source={{ uri: 'https://thespinoff.co.nz/wp-content/uploads/2019/04/eight_col_uni_of_auckland-850x510.jpg'}}
-                />
-            </ItemSection>
-        </Item>
+            <View>
+            <View>
+                <Header />
+            </View>
+            <Item>
+                <Text style={styles.textStyle}> 
+                    Welcome to our displays on the history of computing and computers. 
+                    You might like to have a look at the history time line in the entrance 
+                    corridor down below or visit one of the lobbies to the right for 
+                    displays containing more detail. You can learn more about the displays 
+                    here, where you can also see a list of the many topics that we cover. 
+                    Enjoy! If you are intrigued by what you find here and live close to 
+                    Auckland, or are visiting the city, please feel free to drop in to the 
+                    department and see the displays for yourself. We are located at the 
+                    University on Princes Street and are always open during normal office 
+                    hours and also in the evenings and on the weekends when classes are in 
+                    session. 
+                </Text>
+                <ItemSection>
+                    <Image 
+                        style={styles.imageStyle}
+                        source={{ uri: 'https://thespinoff.co.nz/wp-content/uploads/2019/04/eight_col_uni_of_auckland-850x510.jpg'}}
+                    />
+                </ItemSection>
+            </Item>
+            </View>
     );
     }
 }
