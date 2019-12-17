@@ -3,7 +3,8 @@ import { View, Text, Image } from 'react-native';
 
 
 import ItemSection from './ItemSection';
-import Item from './items'
+import Item from './items';
+import Header from './Header';
 
 class Home extends React.Component {
 
@@ -13,6 +14,7 @@ class Home extends React.Component {
     render() {
         return (
         <Item>
+            <Header />
             <Text style={styles.textStyle}> 
                 Welcome to our displays on the history of computing and computers. 
                 You might like to have a look at the history time line in the entrance 
